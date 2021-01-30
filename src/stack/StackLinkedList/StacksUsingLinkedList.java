@@ -1,5 +1,7 @@
 package stack.StackLinkedList;
 
+import node.Node;
+
 /** Implements Stack Data Structure using a Singly Linked List. Size of Stack is determined by stack memory */
 public class StacksUsingLinkedList {
 

@@ -1,11 +1,13 @@
 package linkedlist.doublylinkedlist;
 
+import node.DLL_Node;
+
 public class DoublyLinkedList {
 
-    Node head = null;
+    public DLL_Node head = null;
 
     void insertAtBeg(int data){
-        Node newNode = new Node(data);
+        DLL_Node newNode = new DLL_Node(data);
         if (head==null) {
             head = newNode;
             return;
@@ -16,8 +18,8 @@ public class DoublyLinkedList {
     }
 
     public void insertAtEnd(int data){
-        var aNewNode = new Node(data);
-        Node tempNode = head;
+        var aNewNode = new DLL_Node(data);
+        DLL_Node tempNode = head;
         if (head == null)
             head = aNewNode;
         else{
@@ -30,12 +32,12 @@ public class DoublyLinkedList {
 
     public void insertAfter(int num, int data){
 
-        var newNode = new Node(data);
+        var newNode = new DLL_Node(data);
         if (head==null) {
             head = newNode;
         }
         else{
-            Node tempNode = head;
+            DLL_Node tempNode = head;
             while(tempNode.data != num){
                 tempNode = tempNode.next;
             }
@@ -54,7 +56,7 @@ public class DoublyLinkedList {
             return;
         }
 
-        Node delNode= head;
+        DLL_Node delNode= head;
         while (delNode != null && delNode.data != num){
           delNode = delNode.next;
         }
@@ -70,7 +72,7 @@ public class DoublyLinkedList {
     }
 
     public void printList(){
-        Node tempNode = head;
+        DLL_Node tempNode = head;
         while(tempNode != null){
             System.out.print(tempNode.data+", ");
             tempNode = tempNode.next;

@@ -11,6 +11,5 @@ public class Main {
         list.delete(1);
         list.printList();  // 2, 3, 10,
 
-        java.util.LinkedList LL = new java.util.LinkedList();
     }
 }

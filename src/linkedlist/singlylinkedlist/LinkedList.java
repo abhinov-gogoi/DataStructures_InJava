@@ -1,5 +1,7 @@
 package linkedlist.singlylinkedlist;
 
+import node.Node;
+
 public class LinkedList {
     Node head = null;
 
