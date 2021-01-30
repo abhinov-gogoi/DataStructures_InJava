@@ -4,7 +4,7 @@ package node;
 public class DLL_Node {
     public int data;
     public DLL_Node next;
-    public linkedlist.doublylinkedlist.DLL_Node prev;
+    public DLL_Node prev;
 
     // constructor
     public DLL_Node(int data) {

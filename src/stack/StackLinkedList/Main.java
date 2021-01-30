@@ -15,7 +15,8 @@ public class Main {
         stackLL.push(61);
         stackLL.push(85);
 
-        int poppedElem = stackLL.pop();
-        System.out.println("Element popped = "+poppedElem);
+        System.out.println(stackLL.pop());
+
+        stackLL.display();
     }
 }

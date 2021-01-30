@@ -5,12 +5,14 @@ import node.Node;
 public class LinkedList {
     Node head = null;
 
+    /** inserts an item at the head */
     public void insertAtBeginning(int data){
         Node aNewNode = new Node(data);
         aNewNode.next = head;
         head = aNewNode;
     }
 
+    /** inserts an item at the end */
     public void insertAtEnd(int data){
         Node aNewNode = new Node(data);
         if(head == null)
@@ -23,6 +25,7 @@ public class LinkedList {
         }
     }
 
+    /** inserts a new item after an element */
     public void insertAfter(int num, int data){
         Node tempNode = head;
         while( tempNode != null && tempNode.data != num)
@@ -33,6 +36,7 @@ public class LinkedList {
         tempNode.next = newNode;
     }
 
+    /** removes the specified element */
     public void delete(int num){
         Node currentNode = head; // tempNode
         Node prevNode = null;
@@ -52,6 +56,7 @@ public class LinkedList {
             prevNode.next = currentNode.next;
     }
 
+    /** returns true if the list contains the specified element */
     public boolean contains(int data) {
         Node temp = head;
         while (temp != null){
@@ -62,6 +67,7 @@ public class LinkedList {
         return false;
     }
 
+    /** prints all items of the list */
     public void printList(){
         Node tempNode = head;
         while(tempNode != null){
@@ -71,7 +77,7 @@ public class LinkedList {
         System.out.println("");
     }
 
-    /* Function to print middle of linked list */
+    /** prints the middle of linked list */
     void printMiddleElement(Node head) {
         Node slow_ptr = head;
         Node fast_ptr = head;
