@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
      HashTable will be implemented using an array of LinkedList
-     those LinkedLists will contain objects of type Entry.
+     those LinkedLists(or buckets) will contain objects of type Entry.
  */
 
 public class HashTable {
@@ -46,6 +46,20 @@ public class HashTable {
             }
         }
         return null;
+    }
+
+    public void remove(int key) throws EntryNotFoundException {
+        int index = hash(key);
+        var bucket = entries[index];
+        if(bucket==null)
+            throw new EntryNotFoundException();
+        for(var entry:bucket) {
+            if (entry.key==key) {
+                bucket.remove(entry);
+                return;
+            }
+        }
+        throw new EntryNotFoundException();
     }
 
     /**
