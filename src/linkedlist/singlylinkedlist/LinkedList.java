@@ -2,7 +2,7 @@ package linkedlist.singlylinkedlist;
 
 import node.Node;
 
-public class LinkedList {
+public class LinkedList<E> {
     Node head = null;
 
     /** inserts an item at the head */
